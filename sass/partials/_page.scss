@@ -1,0 +1,48 @@
+.main-menu {
+    @include inline-block-list-container;
+}
+    .main-menu li {
+        @include inline-block-list-item(.5em);
+    }
+    .main-menu a {
+        color: #fff;
+        font-size: $modular-scale-base*$modular-scale-ratio*1.1;
+        text-decoration: none;
+    }
+
+.home {
+    position: absolute;
+    top: 268px;
+}
+
+.cta {
+    margin: 10px;
+    padding: .7em;
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.dark-bg {
+    background: #444;
+    color: #fff;
+    padding: 1em;
+}
+
+.two-grid {
+    @include outer-container;
+}
+    .two-grid .left-block {
+        text-align: right;
+        @include span-columns(3);
+    }
+    .two-grid .right-block {
+        text-align: left;
+        @include span-columns(9);
+        @include omega;
+    }
+
+.reveal .progress span {
+    background-color: deepskyblue;
+}

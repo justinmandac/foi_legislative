@@ -1,0 +1,33 @@
+body, 
+html {
+    font-size: $modular-scale-base;
+    font-family: $base-font-family;
+    color: $base-font-color;
+    letter-spacing: .01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font-family;
+    margin-bottom: .6em;
+}
+
+h1 {
+    font-size: $modular-scale-base*$modular-scale-ratio*2;
+}
+
+h2 {
+    font-size: $modular-scale-base*$modular-scale-ratio*1.6;
+}
+
+p {
+    font-size: $modular-scale-base*$modular-scale-ratio;
+    letter-spacing: .03em;
+    line-height: 1.2em;
+    margin-bottom: .6em;
+    text-align: left;
+}
