@@ -117,27 +117,26 @@ p {
   min-height: 100vh;
   position: relative;
   background: url(../../assets/images/bg-1987.jpg) center center no-repeat;
-  background-size: cover;
   color: #fff; }
 
-/* line 8, ../sass/partials/_page.scss */
+/* line 7, ../sass/partials/_page.scss */
 .home .grid {
   position: relative;
   top: 160px;
   z-index: 10; }
 
-/* line 14, ../sass/partials/_page.scss */
+/* line 13, ../sass/partials/_page.scss */
 .home .scroll {
   bottom: 0;
   cursor: pointer;
   position: absolute; }
 
-/* line 21, ../sass/partials/_page.scss */
+/* line 20, ../sass/partials/_page.scss */
 .home .scroll a {
   color: #fff;
   text-decoration: none; }
 
-/* line 26, ../sass/partials/_page.scss */
+/* line 25, ../sass/partials/_page.scss */
 .home .scroll:hover .fa {
   -moz-animation: bounceDown .7s infinite linear;
   -webkit-animation: bounceDown .7s infinite linear; }
@@ -147,10 +146,10 @@ p {
     transform: translateY(0%);
     opacity: 1; }
   50% {
-    transform: translateY(20%);
+    transform: translateY(50%);
     opacity: .5; }
   100% {
-    transform: translateY(40%);
+    transform: translateY(0%);
     opacity: 0.2; } }
 @-webkit-keyframes bounceDown {
   0% {
@@ -285,3 +284,11 @@ p {
   height: 120px;
   background: #fff;
   margin: 0 14px 0 auto; }
+
+/* line 168, ../sass/partials/_page.scss */
+.footer-content {
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
