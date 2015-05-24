@@ -40,7 +40,7 @@
     var max_width  = document.documentElement.clientWidth;
     var container = document.getElementById('home-section');
 
-    console.log('Doc size is (width x height) : ' + max_width + ',' + max_height);
+/*    console.log('Doc size is (width x height) : ' + max_width + ',' + max_height);
 
     container.onmousemove = function(e) {
       var x_gain = 2;
@@ -60,7 +60,7 @@
 
       container.style.backgroundPositionX = (50+x_mov).toString()+'%';
       container.style.backgroundPositionY = (50+y_mov).toString()+'%';    
-    };
+    };*/
 
     document.onscroll = function () {
       var y_offset = window.scrollY;
