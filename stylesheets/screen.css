@@ -62,1317 +62,15 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
-/*!
- * reveal.js
- * http://lab.hakim.se/reveal-js
- * MIT licensed
- *
- * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
- */
-/*********************************************
- * RESET STYLES
- *********************************************/
-/* line 13, ../sass/vendor/_reveal.scss */
-.reveal article, .reveal aside, .reveal details, .reveal figcaption, .reveal figure,
-.reveal footer, .reveal header, .reveal hgroup, .reveal menu, .reveal nav, .reveal section {
-  display: block; }
-
-/*********************************************
- * GLOBAL STYLES
- *********************************************/
-/* line 23, ../sass/vendor/_reveal.scss */
-html,
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
-
-/* line 30, ../sass/vendor/_reveal.scss */
-body {
-  position: relative;
-  line-height: 1;
-  background-color: #fff;
-  color: #000; }
-
-/*********************************************
- * VIEW FRAGMENTS
- *********************************************/
-/* line 43, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment {
-  opacity: 0;
-  visibility: hidden;
-  transition: all .2s ease; }
-  /* line 48, ../sass/vendor/_reveal.scss */
-  .reveal .slides section .fragment.visible {
-    opacity: 1;
-    visibility: visible; }
-
-/* line 54, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.grow {
-  opacity: 1;
-  visibility: visible; }
-  /* line 58, ../sass/vendor/_reveal.scss */
-  .reveal .slides section .fragment.grow.visible {
-    transform: scale(1.3); }
-
-/* line 63, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.shrink {
-  opacity: 1;
-  visibility: visible; }
-  /* line 67, ../sass/vendor/_reveal.scss */
-  .reveal .slides section .fragment.shrink.visible {
-    transform: scale(0.7); }
-
-/* line 72, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.zoom-in {
-  transform: scale(0.1); }
-  /* line 75, ../sass/vendor/_reveal.scss */
-  .reveal .slides section .fragment.zoom-in.visible {
-    transform: none; }
-
-/* line 80, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.fade-out {
-  opacity: 1;
-  visibility: visible; }
-  /* line 84, ../sass/vendor/_reveal.scss */
-  .reveal .slides section .fragment.fade-out.visible {
-    opacity: 0;
-    visibility: hidden; }
-
-/* line 90, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.semi-fade-out {
-  opacity: 1;
-  visibility: visible; }
-  /* line 94, ../sass/vendor/_reveal.scss */
-  .reveal .slides section .fragment.semi-fade-out.visible {
-    opacity: 0.5;
-    visibility: visible; }
-
-/* line 100, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.strike {
-  opacity: 1; }
-  /* line 103, ../sass/vendor/_reveal.scss */
-  .reveal .slides section .fragment.strike.visible {
-    text-decoration: line-through; }
-
-/* line 108, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.current-visible {
-  opacity: 0;
-  visibility: hidden; }
-  /* line 112, ../sass/vendor/_reveal.scss */
-  .reveal .slides section .fragment.current-visible.current-fragment {
-    opacity: 1;
-    visibility: visible; }
-
-/* line 118, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.highlight-red,
-.reveal .slides section .fragment.highlight-current-red,
-.reveal .slides section .fragment.highlight-green,
-.reveal .slides section .fragment.highlight-current-green,
-.reveal .slides section .fragment.highlight-blue,
-.reveal .slides section .fragment.highlight-current-blue {
-  opacity: 1;
-  visibility: visible; }
-
-/* line 127, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.highlight-red.visible {
-  color: #ff2c2d; }
-
-/* line 130, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.highlight-green.visible {
-  color: #17ff2e; }
-
-/* line 133, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.highlight-blue.visible {
-  color: #1b91ff; }
-
-/* line 137, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.highlight-current-red.current-fragment {
-  color: #ff2c2d; }
-
-/* line 140, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.highlight-current-green.current-fragment {
-  color: #17ff2e; }
-
-/* line 143, ../sass/vendor/_reveal.scss */
-.reveal .slides section .fragment.highlight-current-blue.current-fragment {
-  color: #1b91ff; }
-
-/*********************************************
- * DEFAULT ELEMENT STYLES
- *********************************************/
-/* Fixes issue in Chrome where italic fonts did not appear when printing to PDF */
-/* line 153, ../sass/vendor/_reveal.scss */
-.reveal:after {
-  content: '';
-  font-style: italic; }
-
-/* line 158, ../sass/vendor/_reveal.scss */
-.reveal iframe {
-  z-index: 1; }
-
-/** Prevents layering issues in certain browser/transition combinations */
-/* line 163, ../sass/vendor/_reveal.scss */
-.reveal a {
-  position: relative; }
-
-/* line 167, ../sass/vendor/_reveal.scss */
-.reveal .stretch {
-  max-width: none;
-  max-height: none; }
-
-/* line 172, ../sass/vendor/_reveal.scss */
-.reveal pre.stretch code {
-  height: 100%;
-  max-height: 100%;
-  box-sizing: border-box; }
-
-/*********************************************
- * CONTROLS
- *********************************************/
-/* line 183, ../sass/vendor/_reveal.scss */
-.reveal .controls {
-  display: none;
-  position: fixed;
-  width: 110px;
-  height: 110px;
-  z-index: 30;
-  right: 10px;
-  bottom: 10px;
-  -webkit-user-select: none; }
-
-/* line 195, ../sass/vendor/_reveal.scss */
-.reveal .controls div {
-  position: absolute;
-  opacity: 0.05;
-  width: 0;
-  height: 0;
-  border: 12px solid transparent;
-  transform: scale(0.9999);
-  transition: all 0.2s ease;
-  -webkit-tap-highlight-color: transparent; }
-
-/* line 207, ../sass/vendor/_reveal.scss */
-.reveal .controls div.enabled {
-  opacity: 0.7;
-  cursor: pointer; }
-
-/* line 212, ../sass/vendor/_reveal.scss */
-.reveal .controls div.enabled:active {
-  margin-top: 1px; }
-
-/* line 216, ../sass/vendor/_reveal.scss */
-.reveal .controls div.navigate-left {
-  top: 42px;
-  border-right-width: 22px;
-  border-right-color: #000; }
-
-/* line 222, ../sass/vendor/_reveal.scss */
-.reveal .controls div.navigate-left.fragmented {
-  opacity: 0.3; }
-
-/* line 226, ../sass/vendor/_reveal.scss */
-.reveal .controls div.navigate-right {
-  left: 74px;
-  top: 42px;
-  border-left-width: 22px;
-  border-left-color: #000; }
-
-/* line 233, ../sass/vendor/_reveal.scss */
-.reveal .controls div.navigate-right.fragmented {
-  opacity: 0.3; }
-
-/* line 237, ../sass/vendor/_reveal.scss */
-.reveal .controls div.navigate-up {
-  left: 42px;
-  border-bottom-width: 22px;
-  border-bottom-color: #000; }
-
-/* line 243, ../sass/vendor/_reveal.scss */
-.reveal .controls div.navigate-up.fragmented {
-  opacity: 0.3; }
-
-/* line 247, ../sass/vendor/_reveal.scss */
-.reveal .controls div.navigate-down {
-  left: 42px;
-  top: 74px;
-  border-top-width: 22px;
-  border-top-color: #000; }
-
-/* line 254, ../sass/vendor/_reveal.scss */
-.reveal .controls div.navigate-down.fragmented {
-  opacity: 0.3; }
-
-/*********************************************
- * PROGRESS BAR
- *********************************************/
-/* line 263, ../sass/vendor/_reveal.scss */
-.reveal .progress {
-  position: fixed;
-  display: none;
-  height: 3px;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.2); }
-
-/* line 274, ../sass/vendor/_reveal.scss */
-.reveal .progress:after {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 20px;
-  width: 100%;
-  top: -20px; }
-
-/* line 282, ../sass/vendor/_reveal.scss */
-.reveal .progress span {
-  display: block;
-  height: 100%;
-  width: 0px;
-  background-color: #000;
-  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
-
-/*********************************************
- * SLIDE NUMBER
- *********************************************/
-/* line 295, ../sass/vendor/_reveal.scss */
-.reveal .slide-number {
-  position: fixed;
-  display: block;
-  right: 15px;
-  bottom: 15px;
-  opacity: 0.5;
-  z-index: 31;
-  font-size: 12px; }
-
-/*********************************************
- * SLIDES
- *********************************************/
-/* line 309, ../sass/vendor/_reveal.scss */
-.reveal {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  touch-action: none; }
-
-/* line 317, ../sass/vendor/_reveal.scss */
-.reveal .slides {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  overflow: visible;
-  z-index: 1;
-  text-align: center;
-  perspective: 600px;
-  perspective-origin: 50% 40%; }
-
-/* line 334, ../sass/vendor/_reveal.scss */
-.reveal .slides > section {
-  -ms-perspective: 600px; }
-
-/* line 338, ../sass/vendor/_reveal.scss */
-.reveal .slides > section,
-.reveal .slides > section > section {
-  display: none;
-  position: absolute;
-  width: 100%;
-  padding: 20px 0px;
-  z-index: 10;
-  transform-style: preserve-3d;
-  transition: transform-origin 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985), transform 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985), visibility 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985), opacity 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
-
-/* Global transition speed settings */
-/* line 354, ../sass/vendor/_reveal.scss */
-.reveal[data-transition-speed="fast"] .slides section {
-  transition-duration: 400ms; }
-
-/* line 357, ../sass/vendor/_reveal.scss */
-.reveal[data-transition-speed="slow"] .slides section {
-  transition-duration: 1200ms; }
-
-/* Slide-specific transition speed overrides */
-/* line 362, ../sass/vendor/_reveal.scss */
-.reveal .slides section[data-transition-speed="fast"] {
-  transition-duration: 400ms; }
-
-/* line 365, ../sass/vendor/_reveal.scss */
-.reveal .slides section[data-transition-speed="slow"] {
-  transition-duration: 1200ms; }
-
-/* line 369, ../sass/vendor/_reveal.scss */
-.reveal .slides > section.stack {
-  padding-top: 0;
-  padding-bottom: 0; }
-
-/* line 374, ../sass/vendor/_reveal.scss */
-.reveal .slides > section.present,
-.reveal .slides > section > section.present {
-  display: block;
-  z-index: 11;
-  opacity: 1; }
-
-/* line 381, ../sass/vendor/_reveal.scss */
-.reveal.center,
-.reveal.center .slides,
-.reveal.center .slides section {
-  min-height: 0 !important; }
-
-/* Don't allow interaction with invisible slides */
-/* line 388, ../sass/vendor/_reveal.scss */
-.reveal .slides > section.future,
-.reveal .slides > section > section.future,
-.reveal .slides > section.past,
-.reveal .slides > section > section.past {
-  pointer-events: none; }
-
-/* line 395, ../sass/vendor/_reveal.scss */
-.reveal.overview .slides > section,
-.reveal.overview .slides > section > section {
-  pointer-events: auto; }
-
-/* line 400, ../sass/vendor/_reveal.scss */
-.reveal .slides > section.past,
-.reveal .slides > section.future,
-.reveal .slides > section > section.past,
-.reveal .slides > section > section.future {
-  opacity: 0; }
-
-/*********************************************
- * Mixins for readability of transitions
- *********************************************/
-/*********************************************
- * SLIDE TRANSITION
- * Aliased 'linear' for backwards compatibility
- *********************************************/
-/* line 454, ../sass/vendor/_reveal.scss */
-.reveal.slide section {
-  backface-visibility: hidden; }
-
-/* line 419, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=slide].past,
-.reveal .slides > section[data-transition~=slide-out].past,
-.reveal.slide .slides > section:not([data-transition]).past {
-  transform: translate(-150%, 0); }
-
-/* line 426, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=slide].future,
-.reveal .slides > section[data-transition~=slide-in].future,
-.reveal.slide .slides > section:not([data-transition]).future {
-  transform: translate(150%, 0); }
-
-/* line 434, ../sass/vendor/_reveal.scss */
-.reveal .slides > section > section[data-transition=slide].past,
-.reveal .slides > section > section[data-transition~=slide-out].past,
-.reveal.slide .slides > section > section:not([data-transition]).past {
-  transform: translate(0, -150%); }
-
-/* line 441, ../sass/vendor/_reveal.scss */
-.reveal .slides > section > section[data-transition=slide].future,
-.reveal .slides > section > section[data-transition~=slide-in].future,
-.reveal.slide .slides > section > section:not([data-transition]).future {
-  transform: translate(0, 150%); }
-
-/* line 454, ../sass/vendor/_reveal.scss */
-.reveal.linear section {
-  backface-visibility: hidden; }
-
-/* line 419, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=linear].past,
-.reveal .slides > section[data-transition~=linear-out].past,
-.reveal.linear .slides > section:not([data-transition]).past {
-  transform: translate(-150%, 0); }
-
-/* line 426, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=linear].future,
-.reveal .slides > section[data-transition~=linear-in].future,
-.reveal.linear .slides > section:not([data-transition]).future {
-  transform: translate(150%, 0); }
-
-/* line 434, ../sass/vendor/_reveal.scss */
-.reveal .slides > section > section[data-transition=linear].past,
-.reveal .slides > section > section[data-transition~=linear-out].past,
-.reveal.linear .slides > section > section:not([data-transition]).past {
-  transform: translate(0, -150%); }
-
-/* line 441, ../sass/vendor/_reveal.scss */
-.reveal .slides > section > section[data-transition=linear].future,
-.reveal .slides > section > section[data-transition~=linear-in].future,
-.reveal.linear .slides > section > section:not([data-transition]).future {
-  transform: translate(0, 150%); }
-
-/*********************************************
- * CONVEX TRANSITION
- * Aliased 'default' for backwards compatibility
- *********************************************/
-/* line 419, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=default].past,
-.reveal .slides > section[data-transition~=default-out].past,
-.reveal.default .slides > section:not([data-transition]).past {
-  transform: translate3d(-100%, 0, 0) rotateY(-90deg) translate3d(-100%, 0, 0); }
-
-/* line 426, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=default].future,
-.reveal .slides > section[data-transition~=default-in].future,
-.reveal.default .slides > section:not([data-transition]).future {
-  transform: translate3d(100%, 0, 0) rotateY(90deg) translate3d(100%, 0, 0); }
-
-/* line 434, ../sass/vendor/_reveal.scss */
-.reveal .slides > section > section[data-transition=default].past,
-.reveal .slides > section > section[data-transition~=default-out].past,
-.reveal.default .slides > section > section:not([data-transition]).past {
-  transform: translate3d(0, -300px, 0) rotateX(70deg) translate3d(0, -300px, 0); }
-
-/* line 441, ../sass/vendor/_reveal.scss */
-.reveal .slides > section > section[data-transition=default].future,
-.reveal .slides > section > section[data-transition~=default-in].future,
-.reveal.default .slides > section > section:not([data-transition]).future {
-  transform: translate3d(0, 300px, 0) rotateX(-70deg) translate3d(0, 300px, 0); }
-
-/* line 419, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=convex].past,
-.reveal .slides > section[data-transition~=convex-out].past,
-.reveal.convex .slides > section:not([data-transition]).past {
-  transform: translate3d(-100%, 0, 0) rotateY(-90deg) translate3d(-100%, 0, 0); }
-
-/* line 426, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=convex].future,
-.reveal .slides > section[data-transition~=convex-in].future,
-.reveal.convex .slides > section:not([data-transition]).future {
-  transform: translate3d(100%, 0, 0) rotateY(90deg) translate3d(100%, 0, 0); }
-
-/* line 434, ../sass/vendor/_reveal.scss */
-.reveal .slides > section > section[data-transition=convex].past,
-.reveal .slides > section > section[data-transition~=convex-out].past,
-.reveal.convex .slides > section > section:not([data-transition]).past {
-  transform: translate3d(0, -300px, 0) rotateX(70deg) translate3d(0, -300px, 0); }
-
-/* line 441, ../sass/vendor/_reveal.scss */
-.reveal .slides > section > section[data-transition=convex].future,
-.reveal .slides > section > section[data-transition~=convex-in].future,
-.reveal.convex .slides > section > section:not([data-transition]).future {
-  transform: translate3d(0, 300px, 0) rotateX(-70deg) translate3d(0, 300px, 0); }
-
-/*********************************************
- * CONCAVE TRANSITION
- *********************************************/
-/* line 419, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=concave].past,
-.reveal .slides > section[data-transition~=concave-out].past,
-.reveal.concave .slides > section:not([data-transition]).past {
-  transform: translate3d(-100%, 0, 0) rotateY(90deg) translate3d(-100%, 0, 0); }
-
-/* line 426, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=concave].future,
-.reveal .slides > section[data-transition~=concave-in].future,
-.reveal.concave .slides > section:not([data-transition]).future {
-  transform: translate3d(100%, 0, 0) rotateY(-90deg) translate3d(100%, 0, 0); }
-
-/* line 434, ../sass/vendor/_reveal.scss */
-.reveal .slides > section > section[data-transition=concave].past,
-.reveal .slides > section > section[data-transition~=concave-out].past,
-.reveal.concave .slides > section > section:not([data-transition]).past {
-  transform: translate3d(0, -80%, 0) rotateX(-70deg) translate3d(0, -80%, 0); }
-
-/* line 441, ../sass/vendor/_reveal.scss */
-.reveal .slides > section > section[data-transition=concave].future,
-.reveal .slides > section > section[data-transition~=concave-in].future,
-.reveal.concave .slides > section > section:not([data-transition]).future {
-  transform: translate3d(0, 80%, 0) rotateX(70deg) translate3d(0, 80%, 0); }
-
-/*********************************************
- * ZOOM TRANSITION
- *********************************************/
-/* line 413, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=zoom],
-.reveal.zoom .slides > section:not([data-transition]) {
-  transition-timing-function: ease; }
-
-/* line 419, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=zoom].past,
-.reveal .slides > section[data-transition~=zoom-out].past,
-.reveal.zoom .slides > section:not([data-transition]).past {
-  visibility: hidden;
-  transform: scale(16); }
-
-/* line 426, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=zoom].future,
-.reveal .slides > section[data-transition~=zoom-in].future,
-.reveal.zoom .slides > section:not([data-transition]).future {
-  visibility: hidden;
-  transform: scale(0.2); }
-
-/* line 434, ../sass/vendor/_reveal.scss */
-.reveal .slides > section > section[data-transition=zoom].past,
-.reveal .slides > section > section[data-transition~=zoom-out].past,
-.reveal.zoom .slides > section > section:not([data-transition]).past {
-  transform: translate(0, -150%); }
-
-/* line 441, ../sass/vendor/_reveal.scss */
-.reveal .slides > section > section[data-transition=zoom].future,
-.reveal .slides > section > section[data-transition~=zoom-in].future,
-.reveal.zoom .slides > section > section:not([data-transition]).future {
-  transform: translate(0, 150%); }
-
-/*********************************************
- * CUBE TRANSITION
- *********************************************/
-/* line 536, ../sass/vendor/_reveal.scss */
-.reveal.cube .slides {
-  perspective: 1300px; }
-
-/* line 540, ../sass/vendor/_reveal.scss */
-.reveal.cube .slides section {
-  padding: 30px;
-  min-height: 700px;
-  backface-visibility: hidden;
-  box-sizing: border-box; }
-
-/* line 546, ../sass/vendor/_reveal.scss */
-.reveal.center.cube .slides section {
-  min-height: 0; }
-
-/* line 549, ../sass/vendor/_reveal.scss */
-.reveal.cube .slides section:not(.stack):before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  transform: translateZ(-20px); }
-
-/* line 561, ../sass/vendor/_reveal.scss */
-.reveal.cube .slides section:not(.stack):after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 90%;
-  height: 30px;
-  left: 5%;
-  bottom: 0;
-  background: none;
-  z-index: 1;
-  border-radius: 4px;
-  box-shadow: 0px 95px 25px rgba(0, 0, 0, 0.2);
-  transform: translateZ(-90px) rotateX(65deg); }
-
-/* line 577, ../sass/vendor/_reveal.scss */
-.reveal.cube .slides > section.stack {
-  padding: 0;
-  background: none; }
-
-/* line 582, ../sass/vendor/_reveal.scss */
-.reveal.cube .slides > section.past {
-  transform-origin: 100% 0%;
-  transform: translate3d(-100%, 0, 0) rotateY(-90deg); }
-
-/* line 587, ../sass/vendor/_reveal.scss */
-.reveal.cube .slides > section.future {
-  transform-origin: 0% 0%;
-  transform: translate3d(100%, 0, 0) rotateY(90deg); }
-
-/* line 592, ../sass/vendor/_reveal.scss */
-.reveal.cube .slides > section > section.past {
-  transform-origin: 0% 100%;
-  transform: translate3d(0, -100%, 0) rotateX(90deg); }
-
-/* line 597, ../sass/vendor/_reveal.scss */
-.reveal.cube .slides > section > section.future {
-  transform-origin: 0% 0%;
-  transform: translate3d(0, 100%, 0) rotateX(-90deg); }
-
-/*********************************************
- * PAGE TRANSITION
- *********************************************/
-/* line 607, ../sass/vendor/_reveal.scss */
-.reveal.page .slides {
-  perspective-origin: 0% 50%;
-  perspective: 3000px; }
-
-/* line 612, ../sass/vendor/_reveal.scss */
-.reveal.page .slides section {
-  padding: 30px;
-  min-height: 700px;
-  box-sizing: border-box; }
-
-/* line 617, ../sass/vendor/_reveal.scss */
-.reveal.page .slides section.past {
-  z-index: 12; }
-
-/* line 620, ../sass/vendor/_reveal.scss */
-.reveal.page .slides section:not(.stack):before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.1);
-  transform: translateZ(-20px); }
-
-/* line 631, ../sass/vendor/_reveal.scss */
-.reveal.page .slides section:not(.stack):after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 90%;
-  height: 30px;
-  left: 5%;
-  bottom: 0;
-  background: none;
-  z-index: 1;
-  border-radius: 4px;
-  box-shadow: 0px 95px 25px rgba(0, 0, 0, 0.2);
-  -webkit-transform: translateZ(-90px) rotateX(65deg); }
-
-/* line 648, ../sass/vendor/_reveal.scss */
-.reveal.page .slides > section.stack {
-  padding: 0;
-  background: none; }
-
-/* line 653, ../sass/vendor/_reveal.scss */
-.reveal.page .slides > section.past {
-  transform-origin: 0% 0%;
-  transform: translate3d(-40%, 0, 0) rotateY(-80deg); }
-
-/* line 658, ../sass/vendor/_reveal.scss */
-.reveal.page .slides > section.future {
-  transform-origin: 100% 0%;
-  transform: translate3d(0, 0, 0); }
-
-/* line 663, ../sass/vendor/_reveal.scss */
-.reveal.page .slides > section > section.past {
-  transform-origin: 0% 0%;
-  transform: translate3d(0, -40%, 0) rotateX(80deg); }
-
-/* line 668, ../sass/vendor/_reveal.scss */
-.reveal.page .slides > section > section.future {
-  transform-origin: 0% 100%;
-  transform: translate3d(0, 0, 0); }
-
-/*********************************************
- * FADE TRANSITION
- *********************************************/
-/* line 678, ../sass/vendor/_reveal.scss */
-.reveal .slides section[data-transition=fade],
-.reveal.fade .slides section:not([data-transition]),
-.reveal.fade .slides > section > section:not([data-transition]) {
-  transform: none;
-  transition: opacity 0.5s; }
-
-/* line 686, ../sass/vendor/_reveal.scss */
-.reveal.fade.overview .slides section,
-.reveal.fade.overview .slides > section > section {
-  transition: none; }
-
-/*********************************************
- * NO TRANSITION
- *********************************************/
-/* line 413, ../sass/vendor/_reveal.scss */
-.reveal .slides > section[data-transition=none],
-.reveal.none .slides > section:not([data-transition]) {
-  transform: none;
-  transition: none; }
-
-/*********************************************
- * PAUSED MODE
- *********************************************/
-/* line 706, ../sass/vendor/_reveal.scss */
-.reveal .pause-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 100;
-  transition: all 1s ease; }
-
-/* line 718, ../sass/vendor/_reveal.scss */
-.reveal.paused .pause-overlay {
-  visibility: visible;
-  opacity: 1; }
-
-/*********************************************
- * FALLBACK
- *********************************************/
-/* line 728, ../sass/vendor/_reveal.scss */
-.no-transforms {
-  overflow-y: auto; }
-
-/* line 732, ../sass/vendor/_reveal.scss */
-.no-transforms .reveal .slides {
-  position: relative;
-  width: 80%;
-  height: auto !important;
-  top: 0;
-  left: 50%;
-  margin: 0;
-  text-align: center; }
-
-/* line 742, ../sass/vendor/_reveal.scss */
-.no-transforms .reveal .controls,
-.no-transforms .reveal .progress {
-  display: none !important; }
-
-/* line 747, ../sass/vendor/_reveal.scss */
-.no-transforms .reveal .slides section {
-  display: block !important;
-  opacity: 1 !important;
-  position: relative !important;
-  height: auto;
-  min-height: 0;
-  top: 0;
-  left: -50%;
-  margin: 70px 0;
-  transform: none; }
-
-/* line 759, ../sass/vendor/_reveal.scss */
-.no-transforms .reveal .slides section section {
-  left: 0; }
-
-/* line 763, ../sass/vendor/_reveal.scss */
-.reveal .no-transition,
-.reveal .no-transition * {
-  transition: none !important; }
-
-/*********************************************
- * PER-SLIDE BACKGROUNDS
- *********************************************/
-/* line 773, ../sass/vendor/_reveal.scss */
-.reveal .backgrounds {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  perspective: 600px; }
-
-/* line 781, ../sass/vendor/_reveal.scss */
-.reveal .slide-background {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  background-color: transparent;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: all 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
-
-/* line 797, ../sass/vendor/_reveal.scss */
-.reveal .slide-background.stack {
-  display: block; }
-
-/* line 801, ../sass/vendor/_reveal.scss */
-.reveal .slide-background.present {
-  opacity: 1;
-  visibility: visible; }
-
-/* line 806, ../sass/vendor/_reveal.scss */
-.print-pdf .reveal .slide-background {
-  opacity: 1 !important;
-  visibility: visible !important; }
-
-/* Video backgrounds */
-/* line 812, ../sass/vendor/_reveal.scss */
-.reveal .slide-background video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  max-height: none;
-  top: 0;
-  left: 0; }
-
-/* Immediate transition style */
-/* line 823, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=none] > .backgrounds .slide-background,
-.reveal > .backgrounds .slide-background[data-background-transition=none] {
-  transition: none; }
-
-/* Slide */
-/* line 829, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=slide] > .backgrounds .slide-background,
-.reveal > .backgrounds .slide-background[data-background-transition=slide] {
-  opacity: 1;
-  backface-visibility: hidden; }
-
-/* line 834, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=slide] > .backgrounds .slide-background.past,
-.reveal > .backgrounds .slide-background.past[data-background-transition=slide] {
-  transform: translate(-100%, 0); }
-
-/* line 838, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=slide] > .backgrounds .slide-background.future,
-.reveal > .backgrounds .slide-background.future[data-background-transition=slide] {
-  transform: translate(100%, 0); }
-
-/* line 843, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=slide] > .backgrounds .slide-background > .slide-background.past,
-.reveal > .backgrounds .slide-background > .slide-background.past[data-background-transition=slide] {
-  transform: translate(0, -100%); }
-
-/* line 847, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=slide] > .backgrounds .slide-background > .slide-background.future,
-.reveal > .backgrounds .slide-background > .slide-background.future[data-background-transition=slide] {
-  transform: translate(0, 100%); }
-
-/* Convex */
-/* line 854, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=convex] > .backgrounds .slide-background.past,
-.reveal > .backgrounds .slide-background.past[data-background-transition=convex] {
-  opacity: 0;
-  transform: translate3d(-100%, 0, 0) rotateY(-90deg) translate3d(-100%, 0, 0); }
-
-/* line 859, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=convex] > .backgrounds .slide-background.future,
-.reveal > .backgrounds .slide-background.future[data-background-transition=convex] {
-  opacity: 0;
-  transform: translate3d(100%, 0, 0) rotateY(90deg) translate3d(100%, 0, 0); }
-
-/* line 865, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=convex] > .backgrounds .slide-background > .slide-background.past,
-.reveal > .backgrounds .slide-background > .slide-background.past[data-background-transition=convex] {
-  opacity: 0;
-  transform: translate3d(0, -100%, 0) rotateX(90deg) translate3d(0, -100%, 0); }
-
-/* line 870, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=convex] > .backgrounds .slide-background > .slide-background.future,
-.reveal > .backgrounds .slide-background > .slide-background.future[data-background-transition=convex] {
-  opacity: 0;
-  transform: translate3d(0, 100%, 0) rotateX(-90deg) translate3d(0, 100%, 0); }
-
-/* Concave */
-/* line 878, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=concave] > .backgrounds .slide-background.past,
-.reveal > .backgrounds .slide-background.past[data-background-transition=concave] {
-  opacity: 0;
-  transform: translate3d(-100%, 0, 0) rotateY(90deg) translate3d(-100%, 0, 0); }
-
-/* line 883, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=concave] > .backgrounds .slide-background.future,
-.reveal > .backgrounds .slide-background.future[data-background-transition=concave] {
-  opacity: 0;
-  transform: translate3d(100%, 0, 0) rotateY(-90deg) translate3d(100%, 0, 0); }
-
-/* line 889, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=concave] > .backgrounds .slide-background > .slide-background.past,
-.reveal > .backgrounds .slide-background > .slide-background.past[data-background-transition=concave] {
-  opacity: 0;
-  transform: translate3d(0, -100%, 0) rotateX(-90deg) translate3d(0, -100%, 0); }
-
-/* line 894, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=concave] > .backgrounds .slide-background > .slide-background.future,
-.reveal > .backgrounds .slide-background > .slide-background.future[data-background-transition=concave] {
-  opacity: 0;
-  transform: translate3d(0, 100%, 0) rotateX(90deg) translate3d(0, 100%, 0); }
-
-/* Zoom */
-/* line 901, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=zoom] > .backgrounds .slide-background,
-.reveal > .backgrounds .slide-background[data-background-transition=zoom] {
-  transition-timing-function: ease; }
-
-/* line 906, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=zoom] > .backgrounds .slide-background.past,
-.reveal > .backgrounds .slide-background.past[data-background-transition=zoom] {
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(16); }
-
-/* line 912, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=zoom] > .backgrounds .slide-background.future,
-.reveal > .backgrounds .slide-background.future[data-background-transition=zoom] {
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0.2); }
-
-/* line 919, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=zoom] > .backgrounds .slide-background > .slide-background.past,
-.reveal > .backgrounds .slide-background > .slide-background.past[data-background-transition=zoom] {
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(16); }
-
-/* line 925, ../sass/vendor/_reveal.scss */
-.reveal[data-background-transition=zoom] > .backgrounds .slide-background > .slide-background.future,
-.reveal > .backgrounds .slide-background > .slide-background.future[data-background-transition=zoom] {
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0.2); }
-
-/* Global transition speed settings */
-/* line 934, ../sass/vendor/_reveal.scss */
-.reveal[data-transition-speed="fast"] > .backgrounds .slide-background {
-  transition-duration: 400ms; }
-
-/* line 937, ../sass/vendor/_reveal.scss */
-.reveal[data-transition-speed="slow"] > .backgrounds .slide-background {
-  transition-duration: 1200ms; }
-
-/*********************************************
- * OVERVIEW
- *********************************************/
-/* line 946, ../sass/vendor/_reveal.scss */
-.reveal.overview {
-  perspective-origin: 50% 50%;
-  perspective: 700px; }
-  /* line 950, ../sass/vendor/_reveal.scss */
-  .reveal.overview .slides section {
-    height: 700px;
-    opacity: 1 !important;
-    overflow: hidden;
-    visibility: visible !important;
-    cursor: pointer;
-    box-sizing: border-box; }
-  /* line 958, ../sass/vendor/_reveal.scss */
-  .reveal.overview .slides section:hover,
-  .reveal.overview .slides section.present {
-    outline: 10px solid rgba(150, 150, 150, 0.4);
-    outline-offset: 10px; }
-  /* line 963, ../sass/vendor/_reveal.scss */
-  .reveal.overview .slides section .fragment {
-    opacity: 1;
-    transition: none; }
-  /* line 967, ../sass/vendor/_reveal.scss */
-  .reveal.overview .slides section:after,
-  .reveal.overview .slides section:before {
-    display: none !important; }
-  /* line 971, ../sass/vendor/_reveal.scss */
-  .reveal.overview .slides > section.stack {
-    padding: 0;
-    top: 0 !important;
-    background: none;
-    outline: none;
-    overflow: visible; }
-  /* line 979, ../sass/vendor/_reveal.scss */
-  .reveal.overview .backgrounds {
-    perspective: inherit; }
-  /* line 983, ../sass/vendor/_reveal.scss */
-  .reveal.overview .backgrounds .slide-background {
-    opacity: 1;
-    visibility: visible;
-    outline: 10px solid rgba(150, 150, 150, 0.1);
-    outline-offset: 10px; }
-
-/* line 995, ../sass/vendor/_reveal.scss */
-.reveal.overview .slides section,
-.reveal.overview-deactivating .slides section {
-  transition: none; }
-
-/* line 1000, ../sass/vendor/_reveal.scss */
-.reveal.overview .backgrounds .slide-background,
-.reveal.overview-deactivating .backgrounds .slide-background {
-  transition: none; }
-
-/* line 1005, ../sass/vendor/_reveal.scss */
-.reveal.overview-animated .slides {
-  transition: transform 0.4s ease; }
-
-/*********************************************
- * RTL SUPPORT
- *********************************************/
-/* line 1014, ../sass/vendor/_reveal.scss */
-.reveal.rtl .slides,
-.reveal.rtl .slides h1,
-.reveal.rtl .slides h2,
-.reveal.rtl .slides h3,
-.reveal.rtl .slides h4,
-.reveal.rtl .slides h5,
-.reveal.rtl .slides h6 {
-  direction: rtl;
-  font-family: sans-serif; }
-
-/* line 1025, ../sass/vendor/_reveal.scss */
-.reveal.rtl pre,
-.reveal.rtl code {
-  direction: ltr; }
-
-/* line 1030, ../sass/vendor/_reveal.scss */
-.reveal.rtl ol,
-.reveal.rtl ul {
-  text-align: right; }
-
-/* line 1035, ../sass/vendor/_reveal.scss */
-.reveal.rtl .progress span {
-  float: right; }
-
-/*********************************************
- * PARALLAX BACKGROUND
- *********************************************/
-/* line 1043, ../sass/vendor/_reveal.scss */
-.reveal.has-parallax-background .backgrounds {
-  transition: all 0.8s ease; }
-
-/* Global transition speed settings */
-/* line 1048, ../sass/vendor/_reveal.scss */
-.reveal.has-parallax-background[data-transition-speed="fast"] .backgrounds {
-  transition-duration: 400ms; }
-
-/* line 1051, ../sass/vendor/_reveal.scss */
-.reveal.has-parallax-background[data-transition-speed="slow"] .backgrounds {
-  transition-duration: 1200ms; }
-
-/*********************************************
- * LINK PREVIEW OVERLAY
- *********************************************/
-/* line 1060, ../sass/vendor/_reveal.scss */
-.reveal .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.9);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease; }
-
-/* line 1072, ../sass/vendor/_reveal.scss */
-.reveal .overlay.visible {
-  opacity: 1;
-  visibility: visible; }
-
-/* line 1077, ../sass/vendor/_reveal.scss */
-.reveal .overlay .spinner {
-  position: absolute;
-  display: block;
-  top: 50%;
-  left: 50%;
-  width: 32px;
-  height: 32px;
-  margin: -16px 0 0 -16px;
-  z-index: 10;
-  background-image: url(data:image/gif;base64,R0lGODlhIAAgAPMAAJmZmf%2F%2F%2F6%2Bvr8nJybW1tcDAwOjo6Nvb26ioqKOjo7Ozs%2FLy8vz8%2FAAAAAAAAAAAACH%2FC05FVFNDQVBFMi4wAwEAAAAh%2FhpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh%2BQQJCgAAACwAAAAAIAAgAAAE5xDISWlhperN52JLhSSdRgwVo1ICQZRUsiwHpTJT4iowNS8vyW2icCF6k8HMMBkCEDskxTBDAZwuAkkqIfxIQyhBQBFvAQSDITM5VDW6XNE4KagNh6Bgwe60smQUB3d4Rz1ZBApnFASDd0hihh12BkE9kjAJVlycXIg7CQIFA6SlnJ87paqbSKiKoqusnbMdmDC2tXQlkUhziYtyWTxIfy6BE8WJt5YJvpJivxNaGmLHT0VnOgSYf0dZXS7APdpB309RnHOG5gDqXGLDaC457D1zZ%2FV%2FnmOM82XiHRLYKhKP1oZmADdEAAAh%2BQQJCgAAACwAAAAAIAAgAAAE6hDISWlZpOrNp1lGNRSdRpDUolIGw5RUYhhHukqFu8DsrEyqnWThGvAmhVlteBvojpTDDBUEIFwMFBRAmBkSgOrBFZogCASwBDEY%2FCZSg7GSE0gSCjQBMVG023xWBhklAnoEdhQEfyNqMIcKjhRsjEdnezB%2BA4k8gTwJhFuiW4dokXiloUepBAp5qaKpp6%2BHo7aWW54wl7obvEe0kRuoplCGepwSx2jJvqHEmGt6whJpGpfJCHmOoNHKaHx61WiSR92E4lbFoq%2BB6QDtuetcaBPnW6%2BO7wDHpIiK9SaVK5GgV543tzjgGcghAgAh%2BQQJCgAAACwAAAAAIAAgAAAE7hDISSkxpOrN5zFHNWRdhSiVoVLHspRUMoyUakyEe8PTPCATW9A14E0UvuAKMNAZKYUZCiBMuBakSQKG8G2FzUWox2AUtAQFcBKlVQoLgQReZhQlCIJesQXI5B0CBnUMOxMCenoCfTCEWBsJColTMANldx15BGs8B5wlCZ9Po6OJkwmRpnqkqnuSrayqfKmqpLajoiW5HJq7FL1Gr2mMMcKUMIiJgIemy7xZtJsTmsM4xHiKv5KMCXqfyUCJEonXPN2rAOIAmsfB3uPoAK%2B%2BG%2Bw48edZPK%2BM6hLJpQg484enXIdQFSS1u6UhksENEQAAIfkECQoAAAAsAAAAACAAIAAABOcQyEmpGKLqzWcZRVUQnZYg1aBSh2GUVEIQ2aQOE%2BG%2BcD4ntpWkZQj1JIiZIogDFFyHI0UxQwFugMSOFIPJftfVAEoZLBbcLEFhlQiqGp1Vd140AUklUN3eCA51C1EWMzMCezCBBmkxVIVHBWd3HHl9JQOIJSdSnJ0TDKChCwUJjoWMPaGqDKannasMo6WnM562R5YluZRwur0wpgqZE7NKUm%2BFNRPIhjBJxKZteWuIBMN4zRMIVIhffcgojwCF117i4nlLnY5ztRLsnOk%2BaV%2BoJY7V7m76PdkS4trKcdg0Zc0tTcKkRAAAIfkECQoAAAAsAAAAACAAIAAABO4QyEkpKqjqzScpRaVkXZWQEximw1BSCUEIlDohrft6cpKCk5xid5MNJTaAIkekKGQkWyKHkvhKsR7ARmitkAYDYRIbUQRQjWBwJRzChi9CRlBcY1UN4g0%2FVNB0AlcvcAYHRyZPdEQFYV8ccwR5HWxEJ02YmRMLnJ1xCYp0Y5idpQuhopmmC2KgojKasUQDk5BNAwwMOh2RtRq5uQuPZKGIJQIGwAwGf6I0JXMpC8C7kXWDBINFMxS4DKMAWVWAGYsAdNqW5uaRxkSKJOZKaU3tPOBZ4DuK2LATgJhkPJMgTwKCdFjyPHEnKxFCDhEAACH5BAkKAAAALAAAAAAgACAAAATzEMhJaVKp6s2nIkolIJ2WkBShpkVRWqqQrhLSEu9MZJKK9y1ZrqYK9WiClmvoUaF8gIQSNeF1Er4MNFn4SRSDARWroAIETg1iVwuHjYB1kYc1mwruwXKC9gmsJXliGxc%2BXiUCby9ydh1sOSdMkpMTBpaXBzsfhoc5l58Gm5yToAaZhaOUqjkDgCWNHAULCwOLaTmzswadEqggQwgHuQsHIoZCHQMMQgQGubVEcxOPFAcMDAYUA85eWARmfSRQCdcMe0zeP1AAygwLlJtPNAAL19DARdPzBOWSm1brJBi45soRAWQAAkrQIykShQ9wVhHCwCQCACH5BAkKAAAALAAAAAAgACAAAATrEMhJaVKp6s2nIkqFZF2VIBWhUsJaTokqUCoBq%2BE71SRQeyqUToLA7VxF0JDyIQh%2FMVVPMt1ECZlfcjZJ9mIKoaTl1MRIl5o4CUKXOwmyrCInCKqcWtvadL2SYhyASyNDJ0uIiRMDjI0Fd30%2FiI2UA5GSS5UDj2l6NoqgOgN4gksEBgYFf0FDqKgHnyZ9OX8HrgYHdHpcHQULXAS2qKpENRg7eAMLC7kTBaixUYFkKAzWAAnLC7FLVxLWDBLKCwaKTULgEwbLA4hJtOkSBNqITT3xEgfLpBtzE%2FjiuL04RGEBgwWhShRgQExHBAAh%2BQQJCgAAACwAAAAAIAAgAAAE7xDISWlSqerNpyJKhWRdlSAVoVLCWk6JKlAqAavhO9UkUHsqlE6CwO1cRdCQ8iEIfzFVTzLdRAmZX3I2SfZiCqGk5dTESJeaOAlClzsJsqwiJwiqnFrb2nS9kmIcgEsjQydLiIlHehhpejaIjzh9eomSjZR%2BipslWIRLAgMDOR2DOqKogTB9pCUJBagDBXR6XB0EBkIIsaRsGGMMAxoDBgYHTKJiUYEGDAzHC9EACcUGkIgFzgwZ0QsSBcXHiQvOwgDdEwfFs0sDzt4S6BK4xYjkDOzn0unFeBzOBijIm1Dgmg5YFQwsCMjp1oJ8LyIAACH5BAkKAAAALAAAAAAgACAAAATwEMhJaVKp6s2nIkqFZF2VIBWhUsJaTokqUCoBq%2BE71SRQeyqUToLA7VxF0JDyIQh%2FMVVPMt1ECZlfcjZJ9mIKoaTl1MRIl5o4CUKXOwmyrCInCKqcWtvadL2SYhyASyNDJ0uIiUd6GGl6NoiPOH16iZKNlH6KmyWFOggHhEEvAwwMA0N9GBsEC6amhnVcEwavDAazGwIDaH1ipaYLBUTCGgQDA8NdHz0FpqgTBwsLqAbWAAnIA4FWKdMLGdYGEgraigbT0OITBcg5QwPT4xLrROZL6AuQAPUS7bxLpoWidY0JtxLHKhwwMJBTHgPKdEQAACH5BAkKAAAALAAAAAAgACAAAATrEMhJaVKp6s2nIkqFZF2VIBWhUsJaTokqUCoBq%2BE71SRQeyqUToLA7VxF0JDyIQh%2FMVVPMt1ECZlfcjZJ9mIKoaTl1MRIl5o4CUKXOwmyrCInCKqcWtvadL2SYhyASyNDJ0uIiUd6GAULDJCRiXo1CpGXDJOUjY%2BYip9DhToJA4RBLwMLCwVDfRgbBAaqqoZ1XBMHswsHtxtFaH1iqaoGNgAIxRpbFAgfPQSqpbgGBqUD1wBXeCYp1AYZ19JJOYgH1KwA4UBvQwXUBxPqVD9L3sbp2BNk2xvvFPJd%2BMFCN6HAAIKgNggY0KtEBAAh%2BQQJCgAAACwAAAAAIAAgAAAE6BDISWlSqerNpyJKhWRdlSAVoVLCWk6JKlAqAavhO9UkUHsqlE6CwO1cRdCQ8iEIfzFVTzLdRAmZX3I2SfYIDMaAFdTESJeaEDAIMxYFqrOUaNW4E4ObYcCXaiBVEgULe0NJaxxtYksjh2NLkZISgDgJhHthkpU4mW6blRiYmZOlh4JWkDqILwUGBnE6TYEbCgevr0N1gH4At7gHiRpFaLNrrq8HNgAJA70AWxQIH1%2BvsYMDAzZQPC9VCNkDWUhGkuE5PxJNwiUK4UfLzOlD4WvzAHaoG9nxPi5d%2BjYUqfAhhykOFwJWiAAAIfkECQoAAAAsAAAAACAAIAAABPAQyElpUqnqzaciSoVkXVUMFaFSwlpOCcMYlErAavhOMnNLNo8KsZsMZItJEIDIFSkLGQoQTNhIsFehRww2CQLKF0tYGKYSg%2BygsZIuNqJksKgbfgIGepNo2cIUB3V1B3IvNiBYNQaDSTtfhhx0CwVPI0UJe0%2Bbm4g5VgcGoqOcnjmjqDSdnhgEoamcsZuXO1aWQy8KAwOAuTYYGwi7w5h%2BKr0SJ8MFihpNbx%2B4Erq7BYBuzsdiH1jCAzoSfl0rVirNbRXlBBlLX%2BBP0XJLAPGzTkAuAOqb0WT5AH7OcdCm5B8TgRwSRKIHQtaLCwg1RAAAOwAAAAAAAAAAAA%3D%3D);
-  visibility: visible;
-  opacity: 0.6;
-  transition: all 0.3s ease; }
-
-/* line 1093, ../sass/vendor/_reveal.scss */
-.reveal .overlay header {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 40px;
-  z-index: 2;
-  border-bottom: 1px solid #222; }
-
-/* line 1102, ../sass/vendor/_reveal.scss */
-.reveal .overlay header a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  padding: 0 10px;
-  float: right;
-  opacity: 0.6;
-  box-sizing: border-box; }
-
-/* line 1112, ../sass/vendor/_reveal.scss */
-.reveal .overlay header a:hover {
-  opacity: 1; }
-
-/* line 1115, ../sass/vendor/_reveal.scss */
-.reveal .overlay header a .icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-position: 50% 50%;
-  background-size: 100%;
-  background-repeat: no-repeat; }
-
-/* line 1124, ../sass/vendor/_reveal.scss */
-.reveal .overlay header a.close .icon {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABkklEQVRYR8WX4VHDMAxG6wnoJrABZQPYBCaBTWAD2g1gE5gg6OOsXuxIlr40d81dfrSJ9V4c2VLK7spHuTJ/5wpM07QXuXc5X0opX2tEJcadjHuV80li/FgxTIEK/5QBCICBD6xEhSMGHgQPgBgLiYVAB1dpSqKDawxTohFw4JSEA3clzgIBPCURwE2JucBR7rhPJJv5OpJwDX+SfDjgx1wACQeJG1aChP9K/IMmdZ8DtESV1WyP3Bt4MwM6sj4NMxMYiqUWHQu4KYA/SYkIjOsm3BXYWMKFDwU2khjCQ4ELJUJ4SmClRArOCmSXGuKma0fYD5CbzHxFpCSGAhfAVSSUGDUk2BWZaff2g6GE15BsBQ9nwmpIGDiyHQddwNTMKkbZaf9fajXQca1EX44puJZUsnY0ObGmITE3GVLCbEhQUjGVt146j6oasWN+49Vph2w1pZ5EansNZqKBm1txbU57iRRcZ86RWMDdWtBJUHBHwoQPi1GV+JCbntmvok7iTX4/Up9mgyTc/FJYDTcndgH/AA5A/CHsyEkVAAAAAElFTkSuQmCC); }
-
-/* line 1127, ../sass/vendor/_reveal.scss */
-.reveal .overlay header a.external .icon {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAcElEQVRYR+2WSQoAIQwEzf8f7XiOMkUQxUPlGkM3hVmiQfQR9GYnH1SsAQlI4DiBqkCMoNb9y2e90IAEJPAcgdznU9+engMaeJ7Azh5Y1U67gAho4DqBqmB1buAf0MB1AlVBek83ZPkmJMGc1wAR+AAqod/B97TRpQAAAABJRU5ErkJggg==); }
-
-/* line 1131, ../sass/vendor/_reveal.scss */
-.reveal .overlay .viewport {
-  position: absolute;
-  top: 40px;
-  right: 0;
-  bottom: 0;
-  left: 0; }
-
-/* line 1139, ../sass/vendor/_reveal.scss */
-.reveal .overlay.overlay-preview .viewport iframe {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  border: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease; }
-
-/* line 1151, ../sass/vendor/_reveal.scss */
-.reveal .overlay.overlay-preview.loaded .viewport iframe {
-  opacity: 1;
-  visibility: visible; }
-
-/* line 1156, ../sass/vendor/_reveal.scss */
-.reveal .overlay.overlay-preview.loaded .spinner {
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0.2); }
-
-/* line 1162, ../sass/vendor/_reveal.scss */
-.reveal .overlay.overlay-help .viewport {
-  overflow: auto;
-  color: #fff; }
-
-/* line 1167, ../sass/vendor/_reveal.scss */
-.reveal .overlay.overlay-help .viewport .viewport-inner {
-  width: 600px;
-  margin: 0 auto;
-  padding: 60px;
-  text-align: center;
-  letter-spacing: normal; }
-
-/* line 1175, ../sass/vendor/_reveal.scss */
-.reveal .overlay.overlay-help .viewport .viewport-inner .title {
-  font-size: 20px; }
-
-/* line 1179, ../sass/vendor/_reveal.scss */
-.reveal .overlay.overlay-help .viewport .viewport-inner table {
-  border: 1px solid #fff;
-  border-collapse: collapse;
-  font-size: 14px; }
-
-/* line 1185, ../sass/vendor/_reveal.scss */
-.reveal .overlay.overlay-help .viewport .viewport-inner table th,
-.reveal .overlay.overlay-help .viewport .viewport-inner table td {
-  width: 200px;
-  padding: 10px;
-  border: 1px solid #fff;
-  vertical-align: middle; }
-
-/* line 1193, ../sass/vendor/_reveal.scss */
-.reveal .overlay.overlay-help .viewport .viewport-inner table th {
-  padding-top: 20px;
-  padding-bottom: 20px; }
-
-/*********************************************
- * PLAYBACK COMPONENT
- *********************************************/
-/* line 1204, ../sass/vendor/_reveal.scss */
-.reveal .playback {
-  position: fixed;
-  left: 15px;
-  bottom: 15px;
-  z-index: 30;
-  cursor: pointer;
-  transition: all 400ms ease; }
-
-/* line 1213, ../sass/vendor/_reveal.scss */
-.reveal.overview .playback {
-  opacity: 0;
-  visibility: hidden; }
-
-/*********************************************
- * ROLLING LINKS
- *********************************************/
-/* line 1223, ../sass/vendor/_reveal.scss */
-.reveal .roll {
-  display: inline-block;
-  line-height: 1.2;
-  overflow: hidden;
-  vertical-align: top;
-  perspective: 400px;
-  perspective-origin: 50% 50%; }
-
-/* line 1232, ../sass/vendor/_reveal.scss */
-.reveal .roll:hover {
-  background: none;
-  text-shadow: none; }
-
-/* line 1236, ../sass/vendor/_reveal.scss */
-.reveal .roll span {
-  display: block;
-  position: relative;
-  padding: 0 2px;
-  pointer-events: none;
-  transition: all 400ms ease;
-  transform-origin: 50% 0%;
-  transform-style: preserve-3d;
-  backface-visibility: hidden; }
-
-/* line 1247, ../sass/vendor/_reveal.scss */
-.reveal .roll:hover span {
-  background: rgba(0, 0, 0, 0.5);
-  transform: translate3d(0px, 0px, -45px) rotateX(90deg); }
-
-/* line 1251, ../sass/vendor/_reveal.scss */
-.reveal .roll span:after {
-  content: attr(data-title);
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 0 2px;
-  backface-visibility: hidden;
-  transform-origin: 50% 0%;
-  transform: translate3d(0px, 110%, 0px) rotateX(-90deg); }
-
-/*********************************************
- * SPEAKER NOTES
- *********************************************/
-/* line 1269, ../sass/vendor/_reveal.scss */
-.reveal aside.notes {
-  display: none; }
-
-/*********************************************
- * ZOOM PLUGIN
- *********************************************/
-/* line 1278, ../sass/vendor/_reveal.scss */
-.zoomed .reveal *,
-.zoomed .reveal *:before,
-.zoomed .reveal *:after {
-  backface-visibility: visible !important; }
-
-/* line 1284, ../sass/vendor/_reveal.scss */
-.zoomed .reveal .progress,
-.zoomed .reveal .controls {
-  opacity: 0; }
-
-/* line 1289, ../sass/vendor/_reveal.scss */
-.zoomed .reveal .roll span {
-  background: none; }
-
-/* line 1293, ../sass/vendor/_reveal.scss */
-.zoomed .reveal .roll span:after {
-  visibility: hidden; }
-
 /* line 1, ../sass/partials/_typography.scss */
 body,
 html {
   font-size: 1em;
   font-family: "Ovo";
-  color: #fff;
+  color: #111;
   letter-spacing: .01em; }
 
-/* line 9, ../sass/partials/_typography.scss */
+/* line 10, ../sass/partials/_typography.scss */
 h1,
 h2,
 h3,
@@ -1382,15 +80,31 @@ h6 {
   font-family: "Muli";
   margin-bottom: .6em; }
 
-/* line 19, ../sass/partials/_typography.scss */
+/* line 20, ../sass/partials/_typography.scss */
 h1 {
+  font-size: 3.999em; }
+
+/* line 24, ../sass/partials/_typography.scss */
+h2 {
+  font-size: 3.1992em; }
+
+/* line 28, ../sass/partials/_typography.scss */
+h3 {
   font-size: 2.666em; }
 
-/* line 23, ../sass/partials/_typography.scss */
-h2 {
+/* line 32, ../sass/partials/_typography.scss */
+h4 {
   font-size: 2.1328em; }
 
-/* line 27, ../sass/partials/_typography.scss */
+/* line 36, ../sass/partials/_typography.scss */
+h5 {
+  font-size: 1.5996em; }
+
+/* line 40, ../sass/partials/_typography.scss */
+h6 {
+  font-size: 1.333em; }
+
+/* line 44, ../sass/partials/_typography.scss */
 p {
   font-size: 1.333em;
   letter-spacing: .03em;
@@ -1399,84 +113,175 @@ p {
   text-align: left; }
 
 /* line 1, ../sass/partials/_page.scss */
-.main-menu {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  *zoom: 1; }
+.home {
+  min-height: 100vh;
+  position: relative;
+  background: url(../../assets/images/bg-1987.jpg) center center no-repeat;
+  background-size: cover;
+  color: #fff; }
 
-/* line 4, ../sass/partials/_page.scss */
-.main-menu li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  white-space: nowrap;
-  padding-left: 0.5em;
-  padding-right: 0.5em; }
+/* line 8, ../sass/partials/_page.scss */
+.home .grid {
+  position: relative;
+  top: 160px;
+  z-index: 10; }
 
-/* line 7, ../sass/partials/_page.scss */
-.main-menu a {
+/* line 14, ../sass/partials/_page.scss */
+.home .scroll {
+  bottom: 0;
+  cursor: pointer;
+  position: absolute; }
+
+/* line 21, ../sass/partials/_page.scss */
+.home .scroll a {
   color: #fff;
-  font-size: 1.4663em;
   text-decoration: none; }
 
-/* line 13, ../sass/partials/_page.scss */
-.home {
+/* line 26, ../sass/partials/_page.scss */
+.home .scroll:hover .fa {
+  -moz-animation: bounceDown .7s infinite linear;
+  -webkit-animation: bounceDown .7s infinite linear; }
+
+@-moz-keyframes bounceDown {
+  0% {
+    transform: translateY(0%);
+    opacity: 1; }
+  50% {
+    transform: translateY(20%);
+    opacity: .5; }
+  100% {
+    transform: translateY(40%);
+    opacity: 0.2; } }
+@-webkit-keyframes bounceDown {
+  0% {
+    transform: translateY(0%); }
+  50% {
+    transform: translateY(25%); }
+  100% {
+    transform: translateY(50%); } }
+/* line 58, ../sass/partials/_page.scss */
+.home .scroll h3 {
+  margin-bottom: 0;
+  padding: .5% 1.2%;
+  margin-bottom: .25em; }
+
+/* line 63, ../sass/partials/_page.scss */
+.home-title h1 {
+  margin-bottom: .25em;
+  text-align: right;
+  font-family: "Ovo";
+  color: #fff; }
+
+/* line 70, ../sass/partials/_page.scss */
+.home-title .highlight {
+  background: #000;
+  padding: .5% 1.2%; }
+
+/* line 75, ../sass/partials/_page.scss */
+.home-overlay {
+  background: #000;
   position: absolute;
-  top: 268px; }
+  z-index: 1;
+  opacity: .7;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
-/* line 18, ../sass/partials/_page.scss */
-.cta {
-  margin: 10px;
-  padding: .7em; }
-  /* line 21, ../sass/partials/_page.scss */
-  .cta a {
-    text-decoration: none;
-    color: #fff; }
+/* line 86, ../sass/partials/_page.scss */
+.navi-block li {
+  margin-bottom: .7em; }
 
-/* line 27, ../sass/partials/_page.scss */
-.dark-bg {
-  background: #444;
+/* line 90, ../sass/partials/_page.scss */
+.navi-block a {
+  text-decoration: none;
   color: #fff;
-  padding: 1em; }
+  font-size: 1.8662em; }
 
-/* line 33, ../sass/partials/_page.scss */
-.two-grid {
+/* line 96, ../sass/partials/_page.scss */
+.grid {
   overflow: hidden;
   *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 36, ../sass/partials/_page.scss */
-.two-grid .left-block {
-  text-align: right;
+/* line 99, ../sass/partials/_page.scss */
+.grid .left-block,
+.grid .right-block {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 23.23176%; }
+  width: 48.82117%; }
   /* line 89, ../sass/vendor/neat/grid/_span-columns.scss */
-  .two-grid .left-block:last-child {
+  .grid .left-block:last-child,
+  .grid .right-block:last-child {
     margin-right: 0; }
 
-/* line 40, ../sass/partials/_page.scss */
-.two-grid .right-block {
-  text-align: left;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%;
+/* line 104, ../sass/partials/_page.scss */
+.grid .right-block {
   margin-right: 0; }
-  /* line 89, ../sass/vendor/neat/grid/_span-columns.scss */
-  .two-grid .right-block:last-child {
-    margin-right: 0; }
 
-/* line 46, ../sass/partials/_page.scss */
-.reveal .progress span {
-  background-color: deepskyblue; }
+/* line 108, ../sass/partials/_page.scss */
+.timeline {
+  padding-top: 2%;
+  background: #000;
+  color: #fff;
+  min-height: 100vh; }
+
+/* line 115, ../sass/partials/_page.scss */
+.timeline-item .left-block {
+  text-align: right;
+  min-height: 120px; }
+
+/* line 119, ../sass/partials/_page.scss */
+.item-content {
+  margin-bottom: 1%;
+  max-height: 480px;
+  padding: 3.5% 0 2% 0;
+  width: 100%;
+  color: #444;
+  background-color: #fff; }
+  /* line 126, ../sass/partials/_page.scss */
+  .item-content.hidden {
+    height: 0;
+    min-height: 0;
+    display: none; }
+
+/* line 133, ../sass/partials/_page.scss */
+.item-content-container {
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 137, ../sass/partials/_page.scss */
+.item-content:last-child {
+  margin-bottom: 0; }
+
+/* line 141, ../sass/partials/_page.scss */
+.item-content .heading {
+  text-align: center; }
+
+/* line 146, ../sass/partials/_page.scss */
+.indicator {
+  background-color: gold;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 16px;
+  margin: 0 8px 0 auto;
+  width: 16px; }
+
+/* line 155, ../sass/partials/_page.scss */
+.indicator.indicator-major {
+  width: 32px;
+  height: 32px;
+  margin-right: 0px; }
+
+/* line 161, ../sass/partials/_page.scss */
+.line {
+  width: 4px;
+  height: 120px;
+  background: #fff;
+  margin: 0 14px 0 auto; }

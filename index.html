@@ -6,84 +6,106 @@
     <title>Legislative Campaign Timeline Prototype</title>
     <link href="http://fonts.googleapis.com/css?family=Ovo" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/screen.css">
 </head>
 
 <body>
-    <div class="reveal">
-        <div class="slides">
-            <section class="home-slide">
-                <section class="home">
-                    <h1 class="main-title">Legislative Campaign Timeline</h1>
-                    <ul class="main-menu">
-                        <li><a href="javascript:void(0)" onclick="Reveal.down()">About</a></li>
-                        <li><a href="javascript:void(0)" onclick="Reveal.right()">Overview</a></li>
+    <div class="page">
+        <section class="home">
+            <div class="grid">
+                <div class="left-block home-title">
+                    <h1><span class="highlight">FOI</span></h1>
+                    <h1><span class="highlight">LEGISLATIVE</span></h1>
+                    <h1><span class="highlight">CAMPAIGN</span></h1>
+                    <h1><span class="highlight">TIMELINE</span></h1>
+                </div>
+                <div class="right-block">
+                    <ul id="navi" class="navi-block">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Timeline Overview</a></li>
                     </ul>
-                    <h1 class="cta"><a href="javascript:void(0)" onclick="Reveal.slide(2,0,0)">START</a></h1>
-                </section>
-                <section class="two-grid">
-                    <div class="left-block">
-                        <h2>About</h2>
-                    </div>
-                    <div class="content right-block">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae sunt reprehenderit consequatur cumque recusandae incidunt natus nesciunt, eaque odit placeat architecto ea officiis deleniti quod dolore! Commodi voluptate, iste dolor!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, delectus ea aperiam nemo perspiciatis doloribus suscipit eos aliquam, explicabo tempore vel facilis repellendus officia sint cupiditate ab maiores vitae amet.</p>
-                    </div>                    
-                </section>
-            </section>
-            <section>
-                <h1>Overview</h1>
-            </section>
-            <section data-background="assets/images/bg-1987.jpg">
-                <section>
-                    <div class="two-grid dark-bg">
-                        <div class="left-block">
-                            <h2>1987</h2>
-                            <h2>Enactment of the Philippine Constitution</h2>
-                        </div>
-                        <div class="right-block">
-                            <p>The right to information is recognized in Article 2, Section 7 and Section 28:“The right of the people to information on matters of public concern shall be recognized. Access to official records, and to documents, and papers pertaining to official acts, transactions, or decisions, as well as to government research data used as basis for policy development, shall be afforded the citizen, subject to limitations as may be provided by law.”</p>                            
-                        </div>
-                    </div>
-                </section>
-                <section class="two-grid dark-bg">
-                    <div class="left-block">
-                        <h2>1987</h2>
-                        <h2>First FOI Bill Filed In Congress</h2>                            
-                    </div>
-                    <div class="right-block">
-                        <h2>October 24</h2>
-                        <p>The First Right to Information bill (House Bill 498) was filed in Congress by then late 2nd District Camarines Sur Rep. Raul Roco.</p>
-                    </div>
-                </section>
-            </section>
-            <section>
-                <div class="two-grid">
-                    <div class="left-block">
-                        <h2>1992</h2>
-                        <h2>February 4</h2>
-                    </div>
-                    <div class="right-block">
-                        <h2>FOI Act of 1992 Filed in Congress</h2>
-                        <p>Rep. Oscar Orbos files House Bill (HB) 1805 or the “Freedom of Information Act of 1992” which mandates government officials “to provide access WITHIN 15 WORKING DAYS from receipt of (a request for) information.” It also directs the Supreme Court to “publish the rules prescribing the procedures, periods and pleadings, as well as courts to which appeals may be made.”</p>
+                    <div class="scroll">
+                        <h3><a href="#timeline-section" id="scroll-trigger">
+                            Scroll Down <i class="fa fa-angle-double-down"></i>
+                        </a></h3>
                     </div>
                 </div>
-            </section>
-            <section>
-                <div class="two-grid">
+            </div>
+            <div class="home-overlay"></div>
+        </section>
+        <section class="timeline" id="timeline-section">
+            <ul class="timeline-nav" id="timeline-navigation">
+                
+            </ul>
+            <div class="timeline-item" id="1987">
+                <div class="grid">
                     <div class="left-block">
-                        <h2>1993</h2>
+                        <div class="indicator indicator-major"></div>
+                        <div class="line"></div>
                     </div>
                     <div class="right-block">
-                        <h2>FOI bill advocacy groups are organized</h2>
-                        <p>FOI bill advocacy groups are formed.</p>
+                        <h5>1987</h5>
                     </div>
-                </div>                
-            </section>
-        </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="grid">
+                    <div class="left-block">
+                        <div class="indicator indicator-minor"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="right-block">
+                        <h5>February 11</h5>
+                        <p>Enactment of the 1987 Constitution</p>
+                    </div>
+                </div>
+                <div class="item-content hidden">
+                    <div class="item-content-container">
+                        <div class="heading">
+                            <h5>February 11, 1987</h5>
+                            <h3>Enactment of the 1987 Constitution</h3>
+                        </div>
+
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate enim culpa atque. Praesentium labore odit, repudiandae non, assumenda ad nesciunt magni consectetur rem, quidem maiores quod obcaecati saepe soluta quo.</p>
+                            
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nihil et illum magnam doloribus enim impedit saepe! Necessitatibus hic dignissimos nam odit eligendi sit eaque itaque at. Expedita, voluptatibus, vitae.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="grid">
+                    <div class="left-block">
+                        <div class="indicator indicator-minor"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="right-block">
+                        <h5>October 24</h5>
+                        <p>1st FOI Bill Filed in Congress</p>
+                    </div>
+                </div>
+                <div class="item-content hidden">
+                    <div class="item-content-container">
+                        <div class="heading">
+                            <h5>October 24, 1987</h5>
+                            <h3>1st FOI Bill Filed in Congress</h3>
+                        </div>
+
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate enim culpa atque. Praesentium labore odit, repudiandae non, assumenda ad nesciunt magni consectetur rem, quidem maiores quod obcaecati saepe soluta quo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            
+        </footer>
     </div>
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/reveal.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>

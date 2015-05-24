@@ -2,7 +2,8 @@ body,
 html {
     font-size: $modular-scale-base;
     font-family: $base-font-family;
-    color: $base-font-color;
+    //color: $base-font-color;
+    color: #111;
     letter-spacing: .01em;
 }
 
@@ -17,11 +18,27 @@ h6 {
 }
 
 h1 {
-    font-size: $modular-scale-base*$modular-scale-ratio*2;
+    font-size: $modular-scale-base*$modular-scale-ratio*3;
 }
 
 h2 {
+    font-size: $modular-scale-base*$modular-scale-ratio*2.4;
+}
+
+h3 {
+    font-size: $modular-scale-base*$modular-scale-ratio*2;
+}
+
+h4 {
     font-size: $modular-scale-base*$modular-scale-ratio*1.6;
+}
+
+h5 {
+    font-size: $modular-scale-base*$modular-scale-ratio*1.2;
+}
+
+h6 {
+    font-size: $modular-scale-base*$modular-scale-ratio*1;
 }
 
 p {

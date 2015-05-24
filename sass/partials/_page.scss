@@ -1,48 +1,166 @@
-.main-menu {
-    @include inline-block-list-container;
-}
-    .main-menu li {
-        @include inline-block-list-item(.5em);
-    }
-    .main-menu a {
-        color: #fff;
-        font-size: $modular-scale-base*$modular-scale-ratio*1.1;
-        text-decoration: none;
-    }
-
 .home {
-    position: absolute;
-    top: 268px;
+    min-height: 100vh;
+    position: relative;
+    background: url(../../assets/images/bg-1987.jpg) center center no-repeat;
+    background-size: cover;
+    color: #fff;
 }
+    .home .grid {
+        position:relative;
+        top: 160px;
+        z-index: 10;
+    }
 
-.cta {
-    margin: 10px;
-    padding: .7em;
-    a {
-        text-decoration: none;
+    .home .scroll {
+        bottom: 0;
+        cursor: pointer;
+        position: absolute;
+        
+    }
+
+    .home .scroll a {
         color: #fff;
+        text-decoration: none;
+    }
+
+    .home .scroll:hover .fa {
+        -moz-animation: bounceDown .7s infinite linear;
+        -webkit-animation: bounceDown .7s infinite linear;
+    }
+
+@-moz-keyframes bounceDown {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(20%);
+        opacity: .5;
+    }
+    100% {
+        transform: translateY(40%);
+        opacity: 0.2;
+    }
+    
+}
+@-webkit-keyframes bounceDown {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(25%);
+    }
+    100% {
+        transform: translateY(50%);
     }
 }
 
-.dark-bg {
-    background: #444;
-    color: #fff;
-    padding: 1em;
+    .home .scroll h3 {
+        margin-bottom: 0;
+        padding: .5% 1.2%;
+        margin-bottom: .25em;
+    }
+    .home-title h1 {
+        margin-bottom: .25em;
+        text-align: right;
+        font-family: $base-font-family;
+        color: #fff;
+    }
+
+    .home-title .highlight {
+        background: #000;
+        padding: .5% 1.2%;
+    }
+
+    .home-overlay {
+        background: #000;
+        position: absolute;
+        z-index: 1;
+        opacity: .7;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+.navi-block li {
+    margin-bottom: .7em;
 }
 
-.two-grid {
+.navi-block a {
+    text-decoration: none;
+    color: #fff;
+    font-size: $modular-scale-base*$modular-scale-ratio*1.4;
+}
+
+.grid {
     @include outer-container;
 }
-    .two-grid .left-block {
-        text-align: right;
-        @include span-columns(3);
+    .grid .left-block, 
+    .grid .right-block {
+        @include span-columns(6);
     }
-    .two-grid .right-block {
-        text-align: left;
-        @include span-columns(9);
+
+    .grid .right-block {
         @include omega;
     }
 
-.reveal .progress span {
-    background-color: deepskyblue;
+.timeline {
+    padding-top: 2%;
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.timeline-item .left-block {
+    text-align: right;
+    min-height: 120px; 
+}
+    .item-content {
+        margin-bottom: 1%;
+        max-height: 480px;
+        padding: 3.5% 0 2% 0;
+        width:100%;
+        color: #444;
+        background-color: #fff;
+        &.hidden {
+            height: 0;
+            min-height: 0;
+            display: none;
+        }
+    }
+
+    .item-content-container {
+        @include outer-container(80%);
+    }
+
+    .item-content:last-child {
+        margin-bottom: 0;
+    }
+
+    .item-content .heading {
+        text-align: center;
+    }
+    
+
+.indicator {
+    background-color:gold;
+    border-radius: 100%;
+    cursor: pointer;
+    height: $indicator-dim;  
+    margin: 0 $indicator-dim/2 0 auto;
+    width: $indicator-dim;
+}
+
+    .indicator.indicator-major {
+        width: $indicator-dim*2;
+        height: $indicator-dim*2;
+        margin-right: 0px;
+    }
+
+.line {
+    width: 4px;
+    height: 120px;
+    background: #fff;
+    margin: 0 14px 0 auto;
 }
