@@ -98,11 +98,19 @@
 }
     .grid .left-block, 
     .grid .right-block {
-        @include span-columns(6);
+        @include span-columns(5);
     }
-
+    
+    .grid .left-block {
+        min-height: 50px;
+    }
+    
     .grid .right-block {
         @include omega;
+    }
+
+    .grid .mid-block {
+        @include span-columns(2);
     }
 
 .timeline {
@@ -112,9 +120,13 @@
     min-height: 100vh;
 }
 
+.timeline-item {
+    min-height: $item-height; 
+}
+
+.timeline-item .right-block,
 .timeline-item .left-block {
-    text-align: right;
-    min-height: 120px; 
+    padding-top: 1%;
 }
     .item-content {
         margin-bottom: 1%;
@@ -134,10 +146,6 @@
         @include outer-container(80%);
     }
 
-    .item-content:last-child {
-        margin-bottom: 0;
-    }
-
     .item-content .heading {
         text-align: center;
     }
@@ -148,23 +156,31 @@
     border-radius: 100%;
     cursor: pointer;
     height: $indicator-dim;  
-    margin: 0 $indicator-dim/2 0 auto;
+    margin: 0 auto;
     width: $indicator-dim;
+    position: relative;
+    z-index: 10;
 }
 
     .indicator.indicator-major {
         width: $indicator-dim*2;
         height: $indicator-dim*2;
-        margin-right: 0px;
     }
 
 .line {
     width: 4px;
-    height: 120px;
     background: #fff;
-    margin: 0 14px 0 auto;
+    z-index: 7;
+    min-height: $item-height;
+    margin: 0 auto;
 }
 
 .footer-content {
     @include outer-container(80%);
+}
+
+#may-20-2015 .grid {
+    background: url(../../assets/images/lightUp4FOI.png) no-repeat center center;
+    background-size: contain;
+    
 }

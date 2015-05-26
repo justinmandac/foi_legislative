@@ -211,29 +211,47 @@ p {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%; }
+  width: 40.29137%; }
   /* line 89, ../sass/vendor/neat/grid/_span-columns.scss */
   .grid .left-block:last-child,
   .grid .right-block:last-child {
     margin-right: 0; }
 
 /* line 104, ../sass/partials/_page.scss */
+.grid .left-block {
+  min-height: 50px; }
+
+/* line 108, ../sass/partials/_page.scss */
 .grid .right-block {
   margin-right: 0; }
 
-/* line 108, ../sass/partials/_page.scss */
+/* line 112, ../sass/partials/_page.scss */
+.grid .mid-block {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  /* line 89, ../sass/vendor/neat/grid/_span-columns.scss */
+  .grid .mid-block:last-child {
+    margin-right: 0; }
+
+/* line 116, ../sass/partials/_page.scss */
 .timeline {
   padding-top: 2%;
   background: #000;
   color: #fff;
   min-height: 100vh; }
 
-/* line 115, ../sass/partials/_page.scss */
-.timeline-item .left-block {
-  text-align: right;
-  min-height: 120px; }
+/* line 123, ../sass/partials/_page.scss */
+.timeline-item {
+  min-height: 240px; }
 
-/* line 119, ../sass/partials/_page.scss */
+/* line 127, ../sass/partials/_page.scss */
+.timeline-item .right-block,
+.timeline-item .left-block {
+  padding-top: 1%; }
+
+/* line 131, ../sass/partials/_page.scss */
 .item-content {
   margin-bottom: 1%;
   max-height: 480px;
@@ -241,13 +259,13 @@ p {
   width: 100%;
   color: #444;
   background-color: #fff; }
-  /* line 126, ../sass/partials/_page.scss */
+  /* line 138, ../sass/partials/_page.scss */
   .item-content.hidden {
     height: 0;
     min-height: 0;
     display: none; }
 
-/* line 133, ../sass/partials/_page.scss */
+/* line 145, ../sass/partials/_page.scss */
 .item-content-container {
   overflow: hidden;
   *zoom: 1;
@@ -255,40 +273,43 @@ p {
   margin-left: auto;
   margin-right: auto; }
 
-/* line 137, ../sass/partials/_page.scss */
-.item-content:last-child {
-  margin-bottom: 0; }
-
-/* line 141, ../sass/partials/_page.scss */
+/* line 149, ../sass/partials/_page.scss */
 .item-content .heading {
   text-align: center; }
 
-/* line 146, ../sass/partials/_page.scss */
+/* line 154, ../sass/partials/_page.scss */
 .indicator {
   background-color: gold;
   border-radius: 100%;
   cursor: pointer;
   height: 16px;
-  margin: 0 8px 0 auto;
-  width: 16px; }
+  margin: 0 auto;
+  width: 16px;
+  position: relative;
+  z-index: 10; }
 
-/* line 155, ../sass/partials/_page.scss */
+/* line 165, ../sass/partials/_page.scss */
 .indicator.indicator-major {
   width: 32px;
-  height: 32px;
-  margin-right: 0px; }
+  height: 32px; }
 
-/* line 161, ../sass/partials/_page.scss */
+/* line 170, ../sass/partials/_page.scss */
 .line {
   width: 4px;
-  height: 120px;
   background: #fff;
-  margin: 0 14px 0 auto; }
+  z-index: 7;
+  min-height: 240px;
+  margin: 0 auto; }
 
-/* line 168, ../sass/partials/_page.scss */
+/* line 178, ../sass/partials/_page.scss */
 .footer-content {
   overflow: hidden;
   *zoom: 1;
   max-width: 80%;
   margin-left: auto;
   margin-right: auto; }
+
+/* line 182, ../sass/partials/_page.scss */
+#may-20-2015 .grid {
+  background: url(../../assets/images/lightUp4FOI.png) no-repeat center center;
+  background-size: contain; }
