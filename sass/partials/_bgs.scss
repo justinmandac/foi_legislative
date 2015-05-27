@@ -1,0 +1,18 @@
+.section-bgs-temp {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.may-2015-20 {
+    background-image: url(../../assets/images/lightUp4FOI.png);
+    @extend .section-bgs-temp;
+}
+
+.may-2015-13 {
+    background-image: url(../../assets/images/safe_image.jpg);
+    @extend .section-bgs-temp;
+}
+
+.may-2015-4 {
+    background-image: url(../../assets/images/hor.jpg);
+    @extend .section-bgs-temp;
+}

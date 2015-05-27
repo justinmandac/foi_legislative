@@ -113,30 +113,38 @@ p {
   text-align: left; }
 
 /* line 1, ../sass/partials/_page.scss */
+html {
+  box-sizing: border-box; }
+
+/* line 4, ../sass/partials/_page.scss */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* line 8, ../sass/partials/_page.scss */
 .home {
   min-height: 100vh;
   position: relative;
   background: url(../../assets/images/bg-1987.jpg) center center no-repeat;
   color: #fff; }
 
-/* line 7, ../sass/partials/_page.scss */
+/* line 14, ../sass/partials/_page.scss */
 .home .grid {
   position: relative;
   top: 160px;
   z-index: 10; }
 
-/* line 13, ../sass/partials/_page.scss */
+/* line 20, ../sass/partials/_page.scss */
 .home .scroll {
   bottom: 0;
   cursor: pointer;
   position: absolute; }
 
-/* line 20, ../sass/partials/_page.scss */
+/* line 27, ../sass/partials/_page.scss */
 .home .scroll a {
   color: #fff;
   text-decoration: none; }
 
-/* line 25, ../sass/partials/_page.scss */
+/* line 32, ../sass/partials/_page.scss */
 .home .scroll:hover .fa {
   -moz-animation: bounceDown .7s infinite linear;
   -webkit-animation: bounceDown .7s infinite linear; }
@@ -158,25 +166,25 @@ p {
     transform: translateY(25%); }
   100% {
     transform: translateY(50%); } }
-/* line 58, ../sass/partials/_page.scss */
+/* line 65, ../sass/partials/_page.scss */
 .home .scroll h3 {
   margin-bottom: 0;
   padding: .5% 1.2%;
   margin-bottom: .25em; }
 
-/* line 63, ../sass/partials/_page.scss */
+/* line 70, ../sass/partials/_page.scss */
 .home-title h1 {
   margin-bottom: .25em;
   text-align: right;
   font-family: "Ovo";
   color: #fff; }
 
-/* line 70, ../sass/partials/_page.scss */
+/* line 77, ../sass/partials/_page.scss */
 .home-title .highlight {
   background: #000;
   padding: .5% 1.2%; }
 
-/* line 75, ../sass/partials/_page.scss */
+/* line 82, ../sass/partials/_page.scss */
 .home-overlay {
   background: #000;
   position: absolute;
@@ -187,17 +195,17 @@ p {
   width: 100%;
   height: 100%; }
 
-/* line 86, ../sass/partials/_page.scss */
+/* line 93, ../sass/partials/_page.scss */
 .navi-block li {
   margin-bottom: .7em; }
 
-/* line 90, ../sass/partials/_page.scss */
+/* line 97, ../sass/partials/_page.scss */
 .navi-block a {
   text-decoration: none;
   color: #fff;
   font-size: 1.8662em; }
 
-/* line 96, ../sass/partials/_page.scss */
+/* line 103, ../sass/partials/_page.scss */
 .grid {
   overflow: hidden;
   *zoom: 1;
@@ -205,7 +213,7 @@ p {
   margin-left: auto;
   margin-right: auto; }
 
-/* line 99, ../sass/partials/_page.scss */
+/* line 106, ../sass/partials/_page.scss */
 .grid .left-block,
 .grid .right-block {
   float: left;
@@ -217,15 +225,15 @@ p {
   .grid .right-block:last-child {
     margin-right: 0; }
 
-/* line 104, ../sass/partials/_page.scss */
+/* line 111, ../sass/partials/_page.scss */
 .grid .left-block {
   min-height: 50px; }
 
-/* line 108, ../sass/partials/_page.scss */
+/* line 115, ../sass/partials/_page.scss */
 .grid .right-block {
   margin-right: 0; }
 
-/* line 112, ../sass/partials/_page.scss */
+/* line 119, ../sass/partials/_page.scss */
 .grid .mid-block {
   float: left;
   display: block;
@@ -235,73 +243,61 @@ p {
   .grid .mid-block:last-child {
     margin-right: 0; }
 
-/* line 116, ../sass/partials/_page.scss */
-.timeline {
-  padding-top: 2%;
-  background: #000;
-  color: #fff;
-  min-height: 100vh; }
-
 /* line 123, ../sass/partials/_page.scss */
-.timeline-item {
-  min-height: 240px; }
+.home .grid .left-block,
+.home .grid .right-block {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  /* line 89, ../sass/vendor/neat/grid/_span-columns.scss */
+  .home .grid .left-block:last-child,
+  .home .grid .right-block:last-child {
+    margin-right: 0; }
 
-/* line 127, ../sass/partials/_page.scss */
-.timeline-item .right-block,
-.timeline-item .left-block {
-  padding-top: 1%; }
+/* line 128, ../sass/partials/_page.scss */
+.timeline {
+  padding: 2% 0;
+  background: #000;
+  color: #fff; }
 
-/* line 131, ../sass/partials/_page.scss */
-.item-content {
-  margin-bottom: 1%;
-  max-height: 480px;
-  padding: 3.5% 0 2% 0;
-  width: 100%;
-  color: #444;
-  background-color: #fff; }
-  /* line 138, ../sass/partials/_page.scss */
-  .item-content.hidden {
-    height: 0;
-    min-height: 0;
-    display: none; }
+/* line 134, ../sass/partials/_page.scss */
+.timeline .grid {
+  position: relative; }
 
-/* line 145, ../sass/partials/_page.scss */
-.item-content-container {
-  overflow: hidden;
-  *zoom: 1;
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto; }
-
-/* line 149, ../sass/partials/_page.scss */
-.item-content .heading {
+/* line 138, ../sass/partials/_page.scss */
+.timeline-group-heading {
   text-align: center; }
 
-/* line 154, ../sass/partials/_page.scss */
-.indicator {
-  background-color: gold;
-  border-radius: 100%;
-  cursor: pointer;
-  height: 16px;
-  margin: 0 auto;
-  width: 16px;
-  position: relative;
-  z-index: 10; }
+/* line 142, ../sass/partials/_page.scss */
+.timeline-item {
+  margin: 0;
+  padding: 0; }
 
-/* line 165, ../sass/partials/_page.scss */
-.indicator.indicator-major {
-  width: 32px;
-  height: 32px; }
+/* line 148, ../sass/partials/_page.scss */
+.timeline-item.photo {
+  min-height: 100vh; }
 
-/* line 170, ../sass/partials/_page.scss */
-.line {
-  width: 4px;
-  background: #fff;
-  z-index: 7;
-  min-height: 240px;
-  margin: 0 auto; }
+/* line 152, ../sass/partials/_page.scss */
+.timeline-item .left-block {
+  padding-top: 1%;
+  position: relative; }
 
-/* line 178, ../sass/partials/_page.scss */
+/* line 156, ../sass/partials/_page.scss */
+.timeline-item .left-block .timeline-item-heading {
+  text-align: right; }
+
+/* line 160, ../sass/partials/_page.scss */
+.timeline-item-heading {
+  font-size: 1.5996em;
+  cursor: pointer; }
+
+/* line 164, ../sass/partials/_page.scss */
+.timeline-item-heading span {
+  background-color: #ccac00;
+  padding: 1%; }
+
+/* line 169, ../sass/partials/_page.scss */
 .footer-content {
   overflow: hidden;
   *zoom: 1;
@@ -309,7 +305,19 @@ p {
   margin-left: auto;
   margin-right: auto; }
 
-/* line 182, ../sass/partials/_page.scss */
-#may-20-2015 .grid {
-  background: url(../../assets/images/lightUp4FOI.png) no-repeat center center;
-  background-size: contain; }
+/* line 1, ../sass/partials/_bgs.scss */
+.section-bgs-temp, .may-2015-20, .may-2015-13, .may-2015-4 {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+/* line 5, ../sass/partials/_bgs.scss */
+.may-2015-20 {
+  background-image: url(../../assets/images/lightUp4FOI.png); }
+
+/* line 10, ../sass/partials/_bgs.scss */
+.may-2015-13 {
+  background-image: url(../../assets/images/safe_image.jpg); }
+
+/* line 15, ../sass/partials/_bgs.scss */
+.may-2015-4 {
+  background-image: url(../../assets/images/hor.jpg); }

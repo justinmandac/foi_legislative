@@ -1,3 +1,10 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 .home {
     min-height: 100vh;
     position: relative;
@@ -112,75 +119,55 @@
     .grid .mid-block {
         @include span-columns(2);
     }
+    
+    .home .grid .left-block,
+    .home .grid .right-block {
+        @include span-columns(6);
+    }
 
 .timeline {
-    padding-top: 2%;
+    padding: 2% 0; 
     background: #000;
     color: #fff;
-    min-height: 100vh;
+}
+
+.timeline .grid {
+    position: relative;
+}
+
+.timeline-group-heading {
+    text-align: center;
 }
 
 .timeline-item {
-    min-height: $item-height; 
+    margin: 0;
+    padding: 0;
+
 }
 
-.timeline-item .right-block,
-.timeline-item .left-block {
+.timeline-item.photo {
+    min-height:100vh;
+}
+
+.timeline-item .left-block  {
     padding-top: 1%;
+    position:relative;
 }
-    .item-content {
-        margin-bottom: 1%;
-        max-height: 480px;
-        padding: 3.5% 0 2% 0;
-        width:100%;
-        color: #444;
-        background-color: #fff;
-        &.hidden {
-            height: 0;
-            min-height: 0;
-            display: none;
-        }
+    .timeline-item .left-block .timeline-item-heading {
+        text-align: right;
     }
 
-    .item-content-container {
-        @include outer-container(80%);
-    }
-
-    .item-content .heading {
-        text-align: center;
-    }
-    
-
-.indicator {
-    background-color:gold;
-    border-radius: 100%;
+.timeline-item-heading {
+    font-size: $modular-scale-base*$modular-scale-ratio*1.2;
     cursor: pointer;
-    height: $indicator-dim;  
-    margin: 0 auto;
-    width: $indicator-dim;
-    position: relative;
-    z-index: 10;
 }
-
-    .indicator.indicator-major {
-        width: $indicator-dim*2;
-        height: $indicator-dim*2;
+    .timeline-item-heading span {
+        background-color: darken(gold, 10%);
+        padding: 1%;
     }
-
-.line {
-    width: 4px;
-    background: #fff;
-    z-index: 7;
-    min-height: $item-height;
-    margin: 0 auto;
-}
 
 .footer-content {
     @include outer-container(80%);
 }
 
-#may-20-2015 .grid {
-    background: url(../../assets/images/lightUp4FOI.png) no-repeat center center;
-    background-size: contain;
-    
-}
+
