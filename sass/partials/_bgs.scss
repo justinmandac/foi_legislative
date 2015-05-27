@@ -1,6 +1,7 @@
 .section-bgs-temp {
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .may-2015-20 {
     background-image: url(../../assets/images/lightUp4FOI.png);

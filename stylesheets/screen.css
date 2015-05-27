@@ -276,28 +276,32 @@ html {
 
 /* line 148, ../sass/partials/_page.scss */
 .timeline-item.photo {
-  min-height: 100vh; }
+  min-height: 640px; }
 
-/* line 152, ../sass/partials/_page.scss */
+/* line 151, ../sass/partials/_page.scss */
+.timeline-item.photo .grid {
+  top: 280px; }
+
+/* line 155, ../sass/partials/_page.scss */
 .timeline-item .left-block {
   padding-top: 1%;
   position: relative; }
 
-/* line 156, ../sass/partials/_page.scss */
+/* line 159, ../sass/partials/_page.scss */
 .timeline-item .left-block .timeline-item-heading {
   text-align: right; }
 
-/* line 160, ../sass/partials/_page.scss */
+/* line 163, ../sass/partials/_page.scss */
 .timeline-item-heading {
   font-size: 1.5996em;
   cursor: pointer; }
 
-/* line 164, ../sass/partials/_page.scss */
+/* line 167, ../sass/partials/_page.scss */
 .timeline-item-heading span {
   background-color: #ccac00;
   padding: 1%; }
 
-/* line 169, ../sass/partials/_page.scss */
+/* line 172, ../sass/partials/_page.scss */
 .footer-content {
   overflow: hidden;
   *zoom: 1;
@@ -307,17 +311,18 @@ html {
 
 /* line 1, ../sass/partials/_bgs.scss */
 .section-bgs-temp, .may-2015-20, .may-2015-13, .may-2015-4 {
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
-/* line 5, ../sass/partials/_bgs.scss */
+/* line 6, ../sass/partials/_bgs.scss */
 .may-2015-20 {
   background-image: url(../../assets/images/lightUp4FOI.png); }
 
-/* line 10, ../sass/partials/_bgs.scss */
+/* line 11, ../sass/partials/_bgs.scss */
 .may-2015-13 {
   background-image: url(../../assets/images/safe_image.jpg); }
 
-/* line 15, ../sass/partials/_bgs.scss */
+/* line 16, ../sass/partials/_bgs.scss */
 .may-2015-4 {
   background-image: url(../../assets/images/hor.jpg); }

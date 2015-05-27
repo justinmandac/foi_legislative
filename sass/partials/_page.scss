@@ -146,8 +146,11 @@ html {
 }
 
 .timeline-item.photo {
-    min-height:100vh;
+    min-height:640px;
 }
+    .timeline-item.photo .grid {
+        top:280px;
+    }
 
 .timeline-item .left-block  {
     padding-top: 1%;
