@@ -141,12 +141,13 @@ html {
 
 .timeline-item {
     margin: 0;
-    padding: 0;
+    padding: 2% 0;
 
 }
 
 .timeline-item.photo {
     min-height:640px;
+    padding: 1% 0;
 }
     .timeline-item.photo .grid {
         top:280px;

@@ -272,36 +272,37 @@ html {
 /* line 142, ../sass/partials/_page.scss */
 .timeline-item {
   margin: 0;
-  padding: 0; }
+  padding: 2% 0; }
 
 /* line 148, ../sass/partials/_page.scss */
 .timeline-item.photo {
-  min-height: 640px; }
+  min-height: 640px;
+  padding: 1% 0; }
 
-/* line 151, ../sass/partials/_page.scss */
+/* line 152, ../sass/partials/_page.scss */
 .timeline-item.photo .grid {
   top: 280px; }
 
-/* line 155, ../sass/partials/_page.scss */
+/* line 156, ../sass/partials/_page.scss */
 .timeline-item .left-block {
   padding-top: 1%;
   position: relative; }
 
-/* line 159, ../sass/partials/_page.scss */
+/* line 160, ../sass/partials/_page.scss */
 .timeline-item .left-block .timeline-item-heading {
   text-align: right; }
 
-/* line 163, ../sass/partials/_page.scss */
+/* line 164, ../sass/partials/_page.scss */
 .timeline-item-heading {
   font-size: 1.5996em;
   cursor: pointer; }
 
-/* line 167, ../sass/partials/_page.scss */
+/* line 168, ../sass/partials/_page.scss */
 .timeline-item-heading span {
   background-color: #ccac00;
   padding: 1%; }
 
-/* line 172, ../sass/partials/_page.scss */
+/* line 173, ../sass/partials/_page.scss */
 .footer-content {
   overflow: hidden;
   *zoom: 1;
