@@ -1,10 +1,16 @@
 $modular-scale-base: 1em;
 $modular-scale-ratio: $perfect-fourth;
 
-$base-font-family: "Ovo";
-$heading-font-family: "Muli";
+$base-font-family: "Quicksand";
+$heading-font-family: "Arvo";
 $base-font-color: #fff;
 
-$indicator-dim: 16px;
+$indicator-dim: 24px;
 
 $item-height: 240px;
+
+$dot-color: #444;
+$dot-border-color: #fff;
+
+$line-color: #ccc;
+$line-width: 8px;
