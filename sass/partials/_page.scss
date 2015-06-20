@@ -2,18 +2,31 @@
 
 .home-section {
     min-height: 100vh;
+    position: relative;
+    min-width: 960px;
+    z-index:9;
+    h1 {
+        background-color: #000;
+        color: #fff;
+        padding: 0 2%;
+        position: absolute;
+        top: 40%;
+    }
     
 }
 
 .timeline-section .title {
+    position: relative;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -88px;
+    margin-top: -78px;
     margin-bottom: 45px;
     background: #fff;
     padding: 1% 0; 
-    width: 90%;
+    width: 960px;
+    z-index:10;
+    @include shadow-top();
 }
 
 .container {
